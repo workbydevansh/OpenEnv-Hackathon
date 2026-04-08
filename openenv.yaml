@@ -1,0 +1,23 @@
+name: support_ops_env
+version: "0.1.0"
+description: "Customer support triage and case handling environment for OpenEnv."
+entrypoint: "server.app:app"
+action: "SupportAction"
+observation: "SupportObservation"
+state: "SupportState"
+reward: "SupportReward"
+tags:
+  - openenv
+  - customer-support
+  - triage
+  - fastapi
+tasks:
+  - id: damaged_refund
+    difficulty: easy
+    objective: "Process a damaged-item refund request and close the case."
+  - id: account_takeover
+    difficulty: medium
+    objective: "Escalate an account-takeover report, secure the account, and hand off safely."
+  - id: enterprise_outage
+    difficulty: hard
+    objective: "Coordinate enterprise outage triage, escalate to SRE, and keep the customer informed."
